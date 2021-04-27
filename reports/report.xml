@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <report
+            id="report_hr_human_idea_custom"
+            string="Print Information"
+            model="human.training"
+            report_type="qweb-pdf"
+            name="hr_custom_idea.report_hr_human_idea_custom"/>
+
+        <template id="report_hr_human_idea_custom">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <sapn t-field="doc.date_today"></sapn>
+                        <h3 class="text-center">Trainer Report</h3>
+                        <br/>
+                        <br/>
+                        <table class="table table-striped">
+                            <thead class="text-center">
+                                <th>Trainer name</th>
+                                <th>phone</th>
+                                <th>University</th>
+                                <th>Faculty</th>
+                                <th>Graduation Date</th>
+                                <th>EMP_Responsible</th>
+                                <th>Department</th>
+                                <th>Manager</th>
+                            </thead>
+                            <tbody class="text-center">
+                                <td><sapn t-field="doc.name"/></td>
+                                <td><sapn t-field="doc.phone"/></td>
+                                <td><sapn t-field="doc.university"/></td>
+                                <td><sapn t-field="doc.faculty"/></td>
+                                <td><sapn t-field="doc.date_graduation"/></td>
+                                <td><sapn t-field="doc.employee_id"/></td>
+                                <td><sapn t-field="doc.department_id"/></td>
+                                <td><sapn t-field="doc.manager_id"/> </td>
+                            </tbody>
+                        </table>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

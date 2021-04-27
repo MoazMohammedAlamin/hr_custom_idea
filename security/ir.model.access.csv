@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_employee,hr.employee,model_hr_employee,base.group_user,1,1,1,1
+hr_employee_children,hr.employee.children,model_hr_employee_children,base.group_user,1,1,1,1
+access_hr_employee-manager-custom,hr.employee.manager.custom,hr.model_hr_employee,hr.group_hr_manager,1,1,0,0
+access_hr_jon_manager,hr.employee.job.manager,hr.model_hr_job,hr.group_hr_manager,1,1,0,0
+access_hr_department_manager,hr.employee.department.manager,hr.model_hr_department,hr.group_hr_manager,1,1,0,0
+access_hr_employee_user,access.hr.employee.user,hr.model_hr_employee,group_emp_user,1,0,0,0
+access_hr_training_user,access.hr.training.user,model_human_training,base.group_user,1,1,1,1
+access_hr_training_manager,access.hr.training.manager,model_human_training,hr.group_hr_manager,1,1,1,0
+
+
+
+
